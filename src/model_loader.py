@@ -164,6 +164,7 @@ class ModelLoader:
             ValueError: If processor configuration is missing or invalid.
         """
         session_options = ort.SessionOptions()
+        # session_options.add_session_config_entry("ep.context_enable","0")
         
         model_path = self.model_subdirectory_path/onnx_graph
         executioner = self._get_executioner()

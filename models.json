@@ -34,6 +34,21 @@
                             "attn_head_size": 128,
                             "max_seq_len": 64}
             }
+        },
+        "DEEPSEEK_14B": {
+            "PATH_SUBDIRECTORY": "qnn-deepseek-r1-distill-qwen-14b",
+            "DEFAULT":{
+                "EMBEDDING": "deepseek_r1_14b_embeddings_quant_v1.0.onnx",
+                "CONTEXT": "deepseek_r1_14b_ctx_v1.0.onnx_ctx.onnx",
+                "CONTEXT_ITER": "deepseek_r1_14b_iter_v1.0.onnx_ctx.onnx",
+                "HEAD": "deepseek_r1_14b_head_quant_v1.0.onnx",
+                "TOKENIZER": "tokenizer.json",
+                "META_DATA": {"num_heads": 40,
+                            "num_key_value_heads": 8,
+                            "num_layers": 48,
+                            "attn_head_size": 128,
+                            "max_seq_len": 64}
+            }
         }
     }
 }
