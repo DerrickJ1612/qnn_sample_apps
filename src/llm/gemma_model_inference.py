@@ -88,6 +88,28 @@ class GemmaModelInference():
         token_ids = self.tokenize(prompt=formatted_query)
         self.model_params.seq_len = token_ids.shape[-1]
         return token_ids
+    
+    def query_builder(self, messages: List[Dict[str,str]]) -> str:
+        self.messages = messages
+        conversation_parts = []
+        system_prompt = ""
+        for message in self.messages:
+            content = message["content"]
+            match message["role"]:
+                case "system":
+                    system_prompt = content
+                case "user":
+                    if system_prompt:
+                        conversation_parts.append(f"<start_of_turn>user\n{system_prompt}\n{content}<end_of_turn>")
+                        system_prompt = ""
+                    else:
+                        conversation_parts.append(f"<start_of_turn>user\n{content}<end_of_turn>")
+                case "assistant":
+                    conversation_parts.append(f"<start_of_turn>model\n{content}<end_of_turn>")
+        formatted_query = "\n".join(conversation_parts) + "\n<start_of_turn>model\n"
+        token_ids = self.tokenize(prompt=formatted_query)
+        self.model_params.seq_len = token_ids.shape[-1]
+        return token_ids
 
     def tokenize(self, prompt: str) -> np.array:
         return np.array([self.tokenizer.encode(prompt).ids], dtype=np.int64)
@@ -183,7 +205,8 @@ class GemmaModelInference():
                     <start_of_turn>model"""
     
     def run_inference(self, 
-                      query: str,
+                      query: Optional[str]=None,
+                      messages: Optional[List[Dict[str,str]]]=None,
                       top_k: int=50,
                       temperature: float=0.6,
                       persona: Optional[str]=None,
@@ -192,7 +215,13 @@ class GemmaModelInference():
                       io_binding: Optional[bool]=None,
                       repetition_penalty: Optional[float]=None) -> List[str]:
         
-        token_ids = self.query(query=query, system_prompt=system_prompt)
+        if query is None and messages is None:
+            raise ValueError("Either 'query' or 'query_builder' must be provided")
+        if query: 
+            token_ids = self.query(query=query, system_prompt=system_prompt)
+        if messages:
+            token_ids = self.query_builder(messages=messages)
+
         kv_cache = self._cache_init()
         len_token_id = token_ids.shape[-1]
         position_ids = np.array(np.arange(len_token_id, dtype=np.int64))
@@ -212,6 +241,7 @@ class GemmaModelInference():
                                     top_k=top_k)
         print("*"*50)
         print(decode_output)
+        return decode_output
         # print(self.tokenizer.decode([decode_output]))
         
 if __name__=="__main__":

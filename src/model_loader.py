@@ -164,6 +164,26 @@ class ModelLoader:
             ValueError: If processor configuration is missing or invalid.
         """
         session_options = ort.SessionOptions()
+
+        # CPU Optimizations
+         # CPU Optimization Options
+        session_options.intra_op_num_threads = 0  # 0 = use all available cores, or set specific number
+        session_options.inter_op_num_threads = 0  # 0 = use all available cores
+        session_options.execution_mode = ort.ExecutionMode.ORT_SEQUENTIAL  # or ORT_PARALLEL
+        session_options.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_ALL
+        
+        # Memory optimizations
+        session_options.enable_mem_pattern = True
+        session_options.enable_mem_reuse = True
+        session_options.enable_cpu_mem_arena = True
+        
+        # Profiling and logging
+        session_options.enable_profiling = False  # Set to True for performance analysis
+        session_options.log_severity_level = 3  # 0=Verbose, 1=Info, 2=Warning, 3=Error, 4=Fatal
+
+         # Additional optimizations
+        session_options.add_session_config_entry("session.disable_prepacking", "0")  # Enable weight prepacking
+        session_options.add_session_config_entry("optimization.enable_gelu_approximation", "1")
         
         model_path = self.model_subdirectory_path/onnx_graph
         executioner = self._get_executioner()

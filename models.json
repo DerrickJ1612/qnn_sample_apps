@@ -38,7 +38,7 @@
         "GEMMA-3_1B": {
             "PATH_SUBDIRECTORY": "gemma-3-1b-it-ONNX-GQA",
             "DEFAULT":{
-                "MODEL": "model.onnx",
+                "MODEL": "gemma.onnx",
                 "TOKENIZER": "tokenizer.json",
                 "META_DATA": {"num_heads": 4,
                         "num_key_value_heads": 1,
