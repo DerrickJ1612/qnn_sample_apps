@@ -17,3 +17,4 @@ notebooks/sample_app_hrnet_ARM64.py
 *checkpoint.ipynb
 *checkpoints
 DEV*
+*.zip
