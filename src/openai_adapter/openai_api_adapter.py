@@ -110,7 +110,7 @@ class VectorToolSelector:
     
     def _fallback_selection(self, query: str) -> List[tuple]:
         """Fallback keyword-base selection when embeddings unavailable"""
-        query_lower = query_lower()
+        query_lower = query.lower()
         matches = []
 
         keyword_patterns = {
