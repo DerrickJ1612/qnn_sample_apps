@@ -18,3 +18,5 @@ notebooks/sample_app_hrnet_ARM64.py
 *checkpoints
 DEV*
 *.zip
+*onnxruntime_profile*
+*/playground/

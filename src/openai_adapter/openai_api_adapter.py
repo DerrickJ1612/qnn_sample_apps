@@ -228,59 +228,59 @@ def convert_registry_tools_to_openai_format() -> List[Tool]:
     return openai_tools
 ############################################################################################################
 
-def load_mock_tools():
-    """Load some mock tools for testing"""
-    mock_tools = {
-        "identify_yoga_pose": {
-            "description": "Identifies and returns the name of the current yoga pose you're performing. Use when user asks about their current pose, position, or posture.",
-            "parameters": {
-                "type": "object",
-                "properties": {},
-                "required": []
-            }
-        },
-        "get_rubik_sw_info": {
-            "description": "Get system software information including OS distribution, version, and kernel details for the Rubik device.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "detail_level": {
-                        "type": "string",
-                        "enum": ["basic", "full"],
-                        "default": "full"
-                    }
-                }
-            }
-        },
-        "get_weather": {
-            "description": "Get current weather information for a specific location including temperature and conditions.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "location": {"type": "string", "description": "City and state"},
-                    "unit": {"type": "string", "enum": ["celsius", "fahrenheit"]}
-                },
-                "required": ["location"]
-            }
-        },
-        "calculate": {
-            "description": "Perform mathematical calculations and solve equations.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "expression": {"type": "string", "description": "Mathematical expression"}
-                },
-                "required": ["expression"]
-            }
-        }
-    }
+# def load_mock_tools():
+#     """Load some mock tools for testing"""
+#     mock_tools = {
+#         "identify_yoga_pose": {
+#             "description": "Identifies and returns the name of the current yoga pose you're performing. Use when user asks about their current pose, position, or posture.",
+#             "parameters": {
+#                 "type": "object",
+#                 "properties": {},
+#                 "required": []
+#             }
+#         },
+#         "get_rubik_sw_info": {
+#             "description": "Get system software information including OS distribution, version, and kernel details for the Rubik device.",
+#             "parameters": {
+#                 "type": "object",
+#                 "properties": {
+#                     "detail_level": {
+#                         "type": "string",
+#                         "enum": ["basic", "full"],
+#                         "default": "full"
+#                     }
+#                 }
+#             }
+#         },
+#         "get_weather": {
+#             "description": "Get current weather information for a specific location including temperature and conditions.",
+#             "parameters": {
+#                 "type": "object",
+#                 "properties": {
+#                     "location": {"type": "string", "description": "City and state"},
+#                     "unit": {"type": "string", "enum": ["celsius", "fahrenheit"]}
+#                 },
+#                 "required": ["location"]
+#             }
+#         },
+#         "calculate": {
+#             "description": "Perform mathematical calculations and solve equations.",
+#             "parameters": {
+#                 "type": "object",
+#                 "properties": {
+#                     "expression": {"type": "string", "description": "Mathematical expression"}
+#                 },
+#                 "required": ["expression"]
+#             }
+#         }
+#     }
     
-    for tool_name, tool_info in mock_tools.items():
-        tool_registry.register_tool(
-            name=tool_name,
-            description=tool_info["description"],
-            parameters=tool_info["parameters"]
-        )
+#     for tool_name, tool_info in mock_tools.items():
+#         tool_registry.register_tool(
+#             name=tool_name,
+#             description=tool_info["description"],
+#             parameters=tool_info["parameters"]
+#         )
 
 async def execute_selected_tools(selected_tools: List[str], query: str) -> Dict[str, Any]:
     """Mock tool execution - for testing"""
