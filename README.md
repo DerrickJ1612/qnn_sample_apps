@@ -61,7 +61,7 @@ pip install -r \src\deepseek_r1\requirements.txt
 
   - `qnn_sample_apps/models/<subdirectory_of_model>`
 
-**Note:** You only need to move files ending in *.onnx and *.bin
+**Note:** You only need to move files ending in *.onnx and *.bin/*.data
 
 
 ## Quick Start
@@ -72,7 +72,7 @@ pip install -r \src\deepseek_r1\requirements.txt
 | 'Local LLM'       | `python ./src/llm/main.py --help` |
 
 ## Contributing
-We welcome contributions to this repository! Please refer to our [contributing guide](CONTRIBUTING.md) for how to contribute.
+I welcome contributions to this repository! Please refer to our [contributing guide](CONTRIBUTING.md) for how to contribute.
 
 ## Testing
 - All regression tests must pass
@@ -88,11 +88,12 @@ This project is licensed under the [MIT](https://github.com/DerrickJ1612/qnn_sam
 ```
 QNN_SAMPLE_APPS/
 ├── models/
-│   ├── cpu-deepseek-r1-distill-qwen-7b/
 │   ├── hrnet_pose/
+│   ├── cpu-deepseek-r1-distill-qwen-7b/
 │   ├── qnn-deepseek-r1-distill-qwen-1.5b/
 │   ├── qnn-deepseek-r1-distill-qwen-7b/
 │   ├── qnn-deepseek-r1-distill-qwen-14b/
+│   ├── gemma-3-1b-it-ONNX-GQA/
 ├── notebooks/
 │   ├── llm/
 │   ├── pose_detection/
