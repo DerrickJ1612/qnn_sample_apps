@@ -1,0 +1,67 @@
+{
+  "routine_name": "Neck Relief Flow",
+  "difficulty": "beginner",
+  "total_duration": 20,
+  "poses": [
+    {
+      "step": 1,
+      "pose_name": "Neck Rolls",
+      "hold_duration": 60,
+      "instructions": "Sit comfortably, place hands on your knees. Gently roll your head from side to side, looking as far as you comfortably can.  Focus on relaxing your neck muscles. (30 seconds)",
+      "key_alignments": [
+        "relaxed shoulders"
+      ],
+      "max_attempts": 3
+    },
+    {
+      "step": 2,
+      "pose_name": "Chin Tucks",
+      "hold_duration": 60,
+      "instructions": "Sit tall with a straight spine. Gently tuck your chin towards your chest, holding for 5-10 seconds. Repeat 5-10 times. (30 seconds)",
+      "key_alignments": [
+        "relaxed shoulders"
+      ],
+      "max_attempts": 3
+    },
+    {
+      "step": 3,
+      "pose_name": "Neck Stretches",
+      "hold_duration": 60,
+      "instructions": "Inhale, reach your head towards your shoulder.  Exhale, gently tilt your head to the right, feeling a stretch on the left side of your neck. Repeat 5-10 times. (30 seconds)",
+      "key_alignments": [
+        "relaxed shoulders"
+      ],
+      "max_attempts": 3
+    },
+    {
+      "step": 4,
+      "pose_name": "Thread the Needle",
+      "hold_duration": 60,
+      "instructions": "Sit comfortably with your legs crossed.  Thread your right hand under your left armpit, and your left hand under your right armpit. Gently lengthen your spine, feeling a gentle stretch in your neck. Hold for 30 seconds. Repeat on the other side. (30 seconds)",
+      "key_alignments": [
+        "relaxed shoulders"
+      ],
+      "max_attempts": 3
+    },
+    {
+      "step": 5,
+      "pose_name": "Cat-Cow Pose",
+      "hold_duration": 60,
+      "instructions": "Come onto your hands and knees. Inhale, drop your belly towards the floor, lift your chest and tailbone towards the ceiling. Exhale, round your spine towards the ceiling, tucking your chin to your chest. Repeat 5-10 times. (30 seconds)",
+      "key_alignments": [
+        "relaxed shoulders"
+      ],
+      "max_attempts": 3
+    },
+    {
+      "step": 6,
+      "pose_name": "Supine Knee to Chest",
+      "hold_duration": 60,
+      "instructions": "Lie on your back, bring one knee to your chest, and gently rotate your upper body. Hold for 30 seconds. Repeat on the other side. (30 seconds)",
+      "key_alignments": [
+        "relaxed shoulders"
+      ],
+      "max_attempts": 3
+    }
+  ]
+}
