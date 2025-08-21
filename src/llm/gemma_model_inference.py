@@ -104,7 +104,7 @@ class GemmaModelInference():
                         system_prompt = ""
                     else:
                         conversation_parts.append(f"<start_of_turn>user\n{content}<end_of_turn>")
-                case "assistant":
+                case "assistant" | "tool":
                     conversation_parts.append(f"<start_of_turn>model\n{content}<end_of_turn>")
         formatted_query = "\n".join(conversation_parts) + "\n<start_of_turn>model\n"
         token_ids = self.tokenize(prompt=formatted_query)

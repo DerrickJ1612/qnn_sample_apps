@@ -4,7 +4,7 @@ from pprint import pprint
 
 client = OpenAI(
     
-    base_url="http://127.0.0.1:8000/",
+    base_url="http://127.0.0.1:8001/",
     api_key="dummy"
 )
 
@@ -36,9 +36,17 @@ response = client.chat.completions.create(
     model="gemma-1b",
     messages=[
         {"role":"system", "content":f"You are a yoga instructor. You MUST respond ONLY with valid JSON in exactly this format: {json.dumps(json_format)}. Do not include any other text, explanations, or formatting. Return only the JSON object."},
-        {"role":"user", "content":"Please provide a yoga routine to address shoulder pain"},
+        {"role":"user", "content":"Please provide a yoga routine to address shoulder pain I only want 4 different exercises"},
         # {"role":"assistant", "content":"For tight hamstrings let's begin with downward dog"}
         ],
-    max_tokens=1000
+    max_tokens=300
 )
+
+# response = client.chat.completions.create(
+#     model="gemma-1b",
+#     messages=[
+#         {"role":"assistant", "content":"For tight hamstrings let's begin with downward dog"}
+#         ],
+#     max_tokens=1000
+# )
 pprint(response)

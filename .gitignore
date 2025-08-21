@@ -20,3 +20,4 @@ DEV*
 *.zip
 *onnxruntime_profile*
 */playground/
+ARCHIVE*
