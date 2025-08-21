@@ -1,0 +1,39 @@
+{
+  "routine_name": "Hip Opener Flow",
+  "difficulty": "intermediate",
+  "total_duration": 20,
+  "poses": [
+    {
+      "step": 1,
+      "pose_name": "Mountain Pose",
+      "hold_duration": 60,
+      "instructions": "Stand with your feet hip-width apart. Ground your feet into the mat, engage your core, and lengthen your spine. Relax your shoulders and let your arms hang by your sides. Breathe deeply. (60 seconds)",
+      "key_alignments": [
+        "engaged core",
+        "lengthened spine",
+        "relaxed shoulders"
+      ]
+    },
+    {
+      "step": 2,
+      "pose_name": "Crescent Lunge",
+      "hold_duration": 60,
+      "instructions": "From Mountain Pose, step your right foot forward and lower your hips to come into a lunge. Keep your right knee at a 90-degree angle and your left leg straight. Raise your arms overhead, engaging your core. Repeat on the other side. (60 seconds)",
+      "key_alignments": [
+        "engaged core",
+        "90-degree right knee",
+        "straight left leg"
+      ]
+    },
+    {
+      "step": 3,
+      "pose_name": "Pigeon Pose",
+      "hold_duration": 120,
+      "instructions": "From all fours, bring your right knee towards your right wrist and your right ankle towards your left wrist. Gently lower your torso towards the mat, keeping your spine long. Hold for 60 seconds, then repeat on the other side. (120 seconds)",
+      "key_alignments": [
+        "long spine",
+        "relaxed shoulders"
+      ]
+    }
+  ]
+}

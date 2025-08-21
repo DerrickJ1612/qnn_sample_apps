@@ -1,0 +1,64 @@
+{
+  "routine_name": "Goddess Pose Flow",
+  "difficulty": "intermediate",
+  "total_duration": 25,
+  "poses": [
+    {
+      "step": 1,
+      "pose_name": "mountain_pose",
+      "hold_duration": 30,
+      "instructions": "Stand tall with feet hip-width apart, arms at your sides. Engage your core and feel your feet rooting into the ground.",
+      "key_alignments": [
+        "straight spine",
+        "relaxed shoulders"
+      ],
+      "max_attempts": 1
+    },
+    {
+      "step": 2,
+      "pose_name": "goddess_pose",
+      "hold_duration": 60,
+      "instructions": "Step your feet wide apart, toes turned out slightly. Bend your knees and sit your hips back, keeping your chest lifted and shoulders back.",
+      "key_alignments": [
+        "knees in line with toes",
+        "engaged core",
+        "lifted chest"
+      ],
+      "max_attempts": 2
+    },
+    {
+      "step": 3,
+      "pose_name": "chair_pose",
+      "hold_duration": 45,
+      "instructions": "From goddess pose, straighten your legs to come into chair pose. Reach your arms overhead, keeping your chest lifted.",
+      "key_alignments": [
+        "knees behind toes",
+        "engaged quadriceps",
+        "straight spine"
+      ],
+      "max_attempts": 2
+    },
+    {
+      "step": 4,
+      "pose_name": "forward_fold",
+      "hold_duration": 60,
+      "instructions": "Hinge at the hips to fold forward, letting your head hang heavy. Keep a slight bend in the knees.",
+      "key_alignments": [
+        "flat back",
+        "relaxed neck"
+      ],
+      "max_attempts": 2
+    },
+    {
+      "step": 5,
+      "pose_name": "mountain_pose",
+      "hold_duration": 30,
+      "instructions": "Slowly roll up to standing, returning to mountain pose.",
+      "key_alignments": [
+        "straight spine",
+        "relaxed shoulders"
+      ],
+      "max_attempts": 1
+    }
+  ]
+}
