@@ -11,8 +11,9 @@ The OpenAI adapter serves as a bridge between OpenAI's API specification and the
     - Choose from any LLM currently provided within this repo 🚧
 
 ## Directory Structure
-
+```
 openai_adapter/
 ├── openai_api_adapter.py                   # Main adapter implementation and server initialization
 ├── example_openai_chat_completion.py       # After starting server above this provides an OpenAI integration example
-└── README.md                       # This file
+└── README.md                               # This file
+```
