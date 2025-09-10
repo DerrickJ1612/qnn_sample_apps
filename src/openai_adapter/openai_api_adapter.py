@@ -46,7 +46,7 @@ async def lifespan(app: FastAPI):
             model_meta=meta
         )
 
-        embedding_model = SentenceTransformer("all-mpnet-base-v2")
+        embedding_model = SentenceTransformer("google/embeddinggemma-300m")
 
         app.state.inference = inference_model
         app.state.embedding = embedding_model
