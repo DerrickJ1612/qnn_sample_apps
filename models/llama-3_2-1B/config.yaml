@@ -1,0 +1,5 @@
+base:
+  model_class: llama3_2
+  checkpoint: /home/derrjohn/Llama-3.2-1B/original/consolidated.00.pth
+  params: /home/derrjohn/Llama-3.2-1B/original/params.json
+  metadata: '{"get_bos_id":128000, "get_eos_ids":[128009, 128001]}'

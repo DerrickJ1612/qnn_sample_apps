@@ -1,0 +1,4 @@
+onnxruntime_qnn
+tokenizers==0.21.1
+notebook==7.4.1
+numpy
