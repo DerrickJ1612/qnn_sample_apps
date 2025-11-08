@@ -5,7 +5,7 @@
   "added_tokens": [
     {
       "id": 151643,
-      "content": "<｜end▁of▁sentence｜>",
+      "content": "<|endoftext|>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -14,25 +14,25 @@
     },
     {
       "id": 151644,
-      "content": "<｜User｜>",
+      "content": "<|im_start|>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
       "normalized": false,
-      "special": false
+      "special": true
     },
     {
       "id": 151645,
-      "content": "<｜Assistant｜>",
+      "content": "<|im_end|>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
       "normalized": false,
-      "special": false
+      "special": true
     },
     {
       "id": 151646,
-      "content": "<｜begin▁of▁sentence｜>",
+      "content": "<|object_ref_start|>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
@@ -41,30 +41,30 @@
     },
     {
       "id": 151647,
-      "content": "<|EOT|>",
+      "content": "<|object_ref_end|>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
       "normalized": false,
-      "special": false
+      "special": true
     },
     {
       "id": 151648,
-      "content": "<think>",
+      "content": "<|box_start|>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
       "normalized": false,
-      "special": false
+      "special": true
     },
     {
       "id": 151649,
-      "content": "</think>",
+      "content": "<|box_end|>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
       "normalized": false,
-      "special": false
+      "special": true
     },
     {
       "id": 151650,
@@ -181,7 +181,7 @@
       "lstrip": false,
       "rstrip": false,
       "normalized": false,
-      "special": false
+      "special": true
     },
     {
       "id": 151663,
@@ -225,58 +225,10 @@
     ]
   },
   "post_processor": {
-    "type": "TemplateProcessing",
-    "single": [
-      {
-        "SpecialToken": {
-          "id": "<｜begin▁of▁sentence｜>",
-          "type_id": 0
-        }
-      },
-      {
-        "Sequence": {
-          "id": "A",
-          "type_id": 0
-        }
-      }
-    ],
-    "pair": [
-      {
-        "SpecialToken": {
-          "id": "<｜begin▁of▁sentence｜>",
-          "type_id": 0
-        }
-      },
-      {
-        "Sequence": {
-          "id": "A",
-          "type_id": 0
-        }
-      },
-      {
-        "SpecialToken": {
-          "id": "<｜begin▁of▁sentence｜>",
-          "type_id": 1
-        }
-      },
-      {
-        "Sequence": {
-          "id": "B",
-          "type_id": 1
-        }
-      }
-    ],
-    "special_tokens": {
-      "<｜begin▁of▁sentence｜>": {
-        "id": "<｜begin▁of▁sentence｜>",
-        "ids": [
-          151646
-        ],
-        "tokens": [
-          "<｜begin▁of▁sentence｜>"
-        ]
-      }
-    }
+    "type": "ByteLevel",
+    "add_prefix_space": false,
+    "trim_offsets": false,
+    "use_regex": false
   },
   "decoder": {
     "type": "ByteLevel",

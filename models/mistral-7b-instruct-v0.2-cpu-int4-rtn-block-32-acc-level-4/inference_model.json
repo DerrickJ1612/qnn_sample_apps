@@ -1,9 +1,0 @@
-{
-  "Name": "mistral-7b-v02-int4-cpu",
-  "PromptTemplate": {
-    "system": "\u003Cs\u003E",
-    "user": "[INST]\n{Content}\n[/INST]",
-    "assistant": "{Content}\u003C/s\u003E",
-    "prompt": "[INST]\n{Content}\n[/INST]"
-  }
-}

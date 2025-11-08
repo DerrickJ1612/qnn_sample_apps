@@ -46,6 +46,21 @@
                         "attn_head_size": 256,
                         "max_seq_len": 512}
             }
-        }
+        },
+        "QWEN_7B": {
+            "PATH_SUBDIRECTORY": "qwen2.5-7b",
+            "DEFAULT":{
+                "EMBEDDING": "embeddings.onnx",
+                "CONTEXT": "context_ctx.onnx",
+                "CONTEXT_ITER": "iterator_ctx.onnx",
+                "HEAD": "lm_head.onnx",
+                "TOKENIZER": "tokenizer.json",
+                "META_DATA": {"num_heads": 28,
+                            "num_key_value_heads": 4,
+                            "num_layers": 28,
+                            "attn_head_size": 128,
+                            "max_seq_len": 64}
+            }
+        },
     }
 }
